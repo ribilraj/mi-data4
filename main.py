@@ -834,31 +834,31 @@ async def txt_handler(bot: Client, m: Message):
 
             elif "https://cpvod.testbook.com/" in url:
                 url = url.replace("https://cpvod.testbook.com/","https://media-cdn.classplusapp.com/drm/")
-                url = f"https://cpapi-rjbs.onrender.com/extract_keys?url={url}@bots_updatee&user_id={1184922780}"
+                url = f"https://cpapi-rjbs-1l0p.onrender.com/extract_keys?url={url}@bots_updatee&user_id={1184922780}"
                 mpd, keys = helper.get_mps_and_keys(url)
                 url = mpd
                 
 
             elif "classplusapp.com/drm/" in url:
-                url = f"https://cpapi-rjbs.onrender.com/extract_keys?url={url}@bots_updatee&user_id={1184922780}"
+                url = f"https://cpapi-rjbs-1l0p.onrender.com/extract_keys?url={url}@bots_updatee&user_id={1184922780}"
                 mpd, keys = helper.get_mps_and_keys(url)
                 url = mpd
                 
 
             elif "classplusapp" in url:
-                response = requests.get(f"https://cpapi-rjbs.onrender.com/extract_keys?url={url}@bots_updatee&user_id={1184922780}")
+                response = requests.get(f"https://cpapi-rjbs-1l0p.onrender.com/extract_keys?url={url}@bots_updatee&user_id={1184922780}")
                 url = response.json()['url']
                 
             elif "tencdn.classplusapp" in url:
-                response = requests.get(f"https://cpapi-rjbs.onrender.com/extract_keys?url={url}@bots_updatee&user_id={1184922780}")
+                response = requests.get(f"https://cpapi-rjbs-1l0p.onrender.com/extract_keys?url={url}@bots_updatee&user_id={1184922780}")
                 url = response.json()['url']
            
             elif 'videos.classplusapp' in url:
-                response = requests.get(f"https://cpapi-rjbs.onrender.com/extract_keys?url={url}@bots_updatee&user_id={1184922780}")
+                response = requests.get(f"https://cpapi-rjbs-1l0p.onrender.com/extract_keys?url={url}@bots_updatee&user_id={1184922780}")
                 url = response.json()['url']
             
             elif 'media-cdn.classplusapp.com' in url or 'media-cdn-alisg.classplusapp.com' in url or 'media-cdn-a.classplusapp.com' in url: 
-                response = requests.get(f"https://cpapi-rjbs.onrender.com/extract_keys?url={url}@bots_updatee&user_id={1184922780}")
+                response = requests.get(f"https://cpapi-rjbs-1l0p.onrender.com/extract_keys?url={url}@bots_updatee&user_id={1184922780}")
                 url = response.json()['url']
 
             if "edge.api.brightcove.com" in url:
@@ -1116,13 +1116,13 @@ async def text_handler(bot: Client, m: Message):
 
             elif "https://cpvod.testbook.com/" in url:
                 url = url.replace("https://cpvod.testbook.com/","https://media-cdn.classplusapp.com/drm/")
-                url = 'https://dragoapi.vercel.app/classplus?link=' + url
+                url = f"https://cpapi-rjbs-1l0p.onrender.com/extract_keys?url={url}@bots_updatee&user_id={1184922780}"
                 mpd, keys = helper.get_mps_and_keys(url)
                 url = mpd
                 keys_string = " ".join([f"--key {key}" for key in keys])
 
             elif "classplusapp.com/drm/" in url:
-                url = 'https://dragoapi.vercel.app/classplus?link=' + url
+                url = f"https://cpapi-rjbs-1l0p.onrender.com/extract_keys?url={url}@bots_updatee&user_id={1184922780}"
                 mpd, keys = helper.get_mps_and_keys(url)
                 url = mpd
                 keys_string = " ".join([f"--key {key}" for key in keys])
